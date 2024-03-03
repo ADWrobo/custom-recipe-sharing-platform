@@ -28,7 +28,7 @@ In order to get this running, there are a few steps you need to take.
 ## Example Actions
 Running CL actions within the container is easy! Use `docker-compose exec` as the prefix.
 
-Adding data to the database is also easy, turns out! An example might be `curl http://localhost:8080/jemo/add -d name="Sponge Bob" -d email=bob@crabby.com
+Adding data to the database is also easy, turns out! An example might be `curl http://localhost:8080/custom-recipe-sharing-platform/add -d name="Sponge Bob" -d email=bob@crabby.com
 ` - note that this does _not_ need to be run within the docker container.
 
 Navigate to `https://localhost:8080/custom-recipe-sharing-platform/all` to see data.
