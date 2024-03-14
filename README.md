@@ -39,5 +39,6 @@ We used the following tutorials to help in setting this up:
 
 Other useful documentation can be found here:
 * https://hub.docker.com/
+* https://www.baeldung.com/spring-boot-testing
 
 [//]: # (TODO: We will want to consider how to implement the database.)
