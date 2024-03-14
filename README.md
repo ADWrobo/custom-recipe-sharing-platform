@@ -39,6 +39,11 @@ We used the following tutorials to help in setting this up:
 
 Other useful documentation can be found here:
 * https://hub.docker.com/
+
+[//]: # (for testing setup)
 * https://www.baeldung.com/spring-boot-testing
+
+[//]: # (for authentication setup)
+* https://www.geeksforgeeks.org/authentication-and-authorization-in-spring-boot-3-0-with-spring-security/ 
 
 [//]: # (TODO: We will want to consider how to implement the database.)
