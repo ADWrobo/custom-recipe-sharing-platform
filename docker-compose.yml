@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  app:
+    container_name: custom_recipe_sharing_platform_app
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+#      TODO: This datasource URL may need to be changed once we establish how we are doing databases.
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-jemo-jemo.a.aivencloud.com:28659/defaultdb
+      SPRING_DATASOURCE_USERNAME: ${CRSP_DB_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${CRSP_DB_PASSWORD}
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
