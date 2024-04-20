@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Search Recipes</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<h1>Recipe Search</h1>
+<form th:action="@{/search}" method="get">
+    <input type="text" name="query" placeholder="Enter ingredients or recipe name">
+    <button type="submit">Search</button>
+</form>
+
+<div id="results">
+    <ul>
+        <li th:each="recipe : ${recipes}" th:text="${recipe.name} + ' - ' + ${recipe.ethnicOrigin}">
+            <a th:href="@{/recipe/{id}(id=${recipe.id})}" th:text="${recipe.name}">Recipe Link</a>
+        </li>
+    </ul>
+</div>
+
+<script src="js/scripts.js"></script>
+</body>
+</html>
