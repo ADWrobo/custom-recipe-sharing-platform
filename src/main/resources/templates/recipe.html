@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Recipe Details</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<h1 th:text="${recipe.name}">Recipe Name</h1>
+<h2>Ingredients</h2>
+<ul>
+    <li th:each="ingredient : ${recipe.ingredients}" th:text="${ingredient.name + ': ' + ingredient.quantity}">Ingredient</li>
+</ul>
+<h2>Preparation Steps</h2>
+<ol>
+    <li th:each="step : ${recipe.preparationSteps}" th:text="${step}">Step Description</li>
+</ol>
+<div th:if="${recipe.multimediaContent != null}">
+    <img th:src="@{${recipe.multimediaContent.imagePath}}" alt="Recipe Image">
+</div>
+
+<a href="/">Back to search</a>
+
+<script src="js/scripts.js"></script>
+</body>
+</html>

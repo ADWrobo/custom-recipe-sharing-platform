@@ -12,7 +12,7 @@ WORKDIR /usr/src/app
 RUN mvn clean package -DskipTests
 
 # Use OpenJDK for running the application
-FROM openjdk:21
+FROM openjdk:22
 
 # Copy the built artifact from the build stage
 COPY --from=build /usr/src/app/target/custom-recipe-sharing-platform-0.0.1-SNAPSHOT.jar /usr/app/custom-recipe-sharing-platform.jar
