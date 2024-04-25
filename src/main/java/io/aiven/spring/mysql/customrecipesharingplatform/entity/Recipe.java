@@ -1,7 +1,6 @@
 package io.aiven.spring.mysql.customrecipesharingplatform.entity;
 
 import jakarta.persistence.*;
-
 import java.util.List;
 
 @Entity
