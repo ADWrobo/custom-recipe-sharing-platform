@@ -9,6 +9,7 @@ import java.util.List;
 
 @Repository
 public interface RecipeRepository extends JpaRepository<Recipe, Long> {
+    // TODO: This needs an inner join with Ingredient to be able to query an ingredient name
     @Query("SELECT r FROM Recipe r WHERE LOWER(r.name) LIKE LOWER(CONCAT('%', :query, '%')) " +
             "OR LOWER(r.ethnicOrigin) LIKE LOWER(CONCAT('%', :query, '%')) " +
             "OR LOWER(r.difficulty) LIKE LOWER(CONCAT('%', :query, '%'))")
